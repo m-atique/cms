@@ -24,7 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Login  from './screens/login'
+import Login  from './screens/loginnew'
 
 
 
