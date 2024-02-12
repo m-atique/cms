@@ -36,13 +36,13 @@ function Lbl_Input(props) {
 
 
   return (
-    <View className='flex flex-row w-full  items-center justify-center'>
-        <View className=''><Text>{props.label}</Text></View>
-        <View className = ' rounded-md pl-2 w-4/5'>
+    <View className='flex flex-row w-full  items-center justify-center mb-2'>
+        <View className='w-[30%] text-center bg-slate-300 p-2 '><Text>{props.label}</Text></View>
+        <View className = 'w-[70%] rounded-md pl-2'>
         <TextInput type ="text" placeholder={props.phl}
             value= {props.value}
-            onChangeText={(e) => props.setfatherJob(e.target.value)}
-            className='w-full border pl-2  border-slate-400 rounded-md p-1'
+            onChangeText={(txt) => props.setValue(txt)}
+            className='w-full border pl-5  border-slate-400 rounded-md p-1'
             />
         </View>
     </View>

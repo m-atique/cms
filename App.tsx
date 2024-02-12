@@ -35,8 +35,8 @@ function App(): React.JSX.Element {
 
   return (
    <View>
-   <Login />
-   {/* <SignUp /> */}
+   {/* <Login /> */}
+   <SignUp />
    </View>
   );
 }
