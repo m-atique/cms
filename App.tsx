@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Login  from './screens/loginnew'
+import SignUp from './screens/signUp';
 
 
 
@@ -35,6 +36,7 @@ function App(): React.JSX.Element {
   return (
    <View>
    <Login />
+   {/* <SignUp /> */}
    </View>
   );
 }
