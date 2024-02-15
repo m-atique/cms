@@ -26,6 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Login  from './screens/loginnew'
 import SignUp from './screens/signUp';
+import MyStack from './components/navigation/navigation';
 
 
 
@@ -34,10 +35,10 @@ function App(): React.JSX.Element {
 
 
   return (
-   <View>
-   {/* <Login /> */}
-   <SignUp />
-   </View>
+
+
+   <MyStack />
+
   );
 }
 

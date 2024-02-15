@@ -49,15 +49,14 @@ function SignUp() {
         drivingLicense:"",
         authority:"",
         expiry:"",
+        permanentAddress:"",
+        currentAddress:"",
     }
 
     const [data,setData] =useState(defaults)
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'android' ? 'padding' : 'height'}
-      style={{flex: 1}}
-      enabled>
+   
       <View>
         <LinearGradient
           colors={['#85C1E9', '#82E0AA']}
@@ -69,7 +68,12 @@ function SignUp() {
               CREATE YOUR ACCOUNT
             </Text>
 
-            <View className="flex items-center justify-center w-[90%] m-2 h-[90%]  ">
+              <ScrollView className =' h-[95%]'>
+              <KeyboardAvoidingView
+      behavior={Platform.OS === 'android' ? 'padding' : 'height'}
+      // style={{flex: 1,}}
+      enabled>
+            <View className="flex items-center justify-center w-[90%] m-2 h-[95%]  overflow-y-scroll ">
               {/* name */}
               <Lbl_Input
                 label="Name"
@@ -123,7 +127,7 @@ function SignUp() {
               />
                {/* driving licence  */}
                <Lbl_Input
-                label="Dvr.Licence #"
+                label="Dvr.Licence"
                 phl=" Driving Licience Number"
                 value={data.drivingLicense}
                 setValue={value => setData({...data, drivingLicense: value})}
@@ -142,13 +146,94 @@ function SignUp() {
                 value={data.expiry}
                 setValue={value => setData({...data, expiry: value})}
               />
+               {/* permanent address  */}
+               <Lbl_Input
+                label="Permanent Address"
+                phl="Permanent Address"
+                value={data.permanentAddress}
+                setValue={value => setData({...data, permanentAddress: value})}
+              />
+              {/* current address  */}
+              <Lbl_Input
+                label="Current Address"
+                phl="Current Address"
+                value={data.currentAddress}
+                setValue={value => setData({...data, currentAddress: value})}
+              />
+                
+                
 
-
-            </View>
+               {/* contact number  */}
+               <Lbl_Input
+                label="Contact #"
+                phl=" Personal Phone Number"
+                value={data.contact}
+                setValue={value => setData({...data, contact: value})}
+              />
+              {/* emergancy number  */}
+              <Lbl_Input
+                label="Emergancy Contact"
+                phl=" Personal Phone Number"
+                value={data.econtact}
+                setValue={value => setData({...data, enabledcontact: value})}
+              />
+                 {/* height  */}
+                 <Lbl_Input
+                label="Height"
+                phl="In feet & inches"
+                value={data.height}
+                setValue={value => setData({...data, height: value})}
+              />
+               {/* weight  */}
+               <Lbl_Input
+                label="Weight"
+                phl="In Kgs"
+                value={data.weight}
+                setValue={value => setData({...data, weight: value})}
+              />
+           
+            {/* date of joing  */}
+            <Lbl_Input
+                label="Date of Joining Govt. Service "
+                phl="01-01-02024"
+                value={data.doj}
+                setValue={value => setData({...data, doj: value})}
+              />
+               {/* date of joingNHMP  */}
+              <Lbl_Input
+                label="Date of Joining nhmp "
+                phl="01-01-02024"
+                value={data.dojNhmp}
+                setValue={value => setData({...data, dojNhmp: value})}
+              />
+              {/* date of arrival  */}
+              <Lbl_Input
+                label="Date of Arrival at NHMP College "
+                phl="01-01-02024"
+                value={data.doa}
+                setValue={value => setData({...data, doa: value})}
+              />
+            {/* proffisional experience */}
+            <Lbl_Input
+                label="Professional Experience "
+                phl="Any Previous Job Experience "
+                value={data.experience}
+                setValue={value => setData({...data, experience: value})}
+              />
+           </View>
+    </KeyboardAvoidingView>
+              </ScrollView>
+              <View className ="flex flex-row py-2">
+                <Pressable className='p-2 bg-red-600 rounded-md w-1/4  mx-5'>
+                  <Text className ="text-center text-white"> Save</Text>
+                </Pressable>
+                <Pressable className='p-2 bg-blue-600 rounded-md w-1/4  mx-5'>
+                  <Text className ="text-center text-white"> Reset</Text>
+                </Pressable>
+              </View>
           </View>
         </LinearGradient>
       </View>
-    </KeyboardAvoidingView>
   );
 }
 
