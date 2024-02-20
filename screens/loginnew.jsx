@@ -13,7 +13,8 @@ import {
   View,
   Pressable,Image,
   KeyboardAvoidingView,
-  TouchableWithoutFeedback,Keyboard
+  TouchableWithoutFeedback,
+  Keyboard
 } from 'react-native';
 
 import {
@@ -37,31 +38,28 @@ function Login() {
 
 
   return (
-    <SafeAreaView className=''>
-    <KeyboardAvoidingView
-
-    behavior={Platform.OS === 'android' ? 'padding' : 'height'}
-    style={{flex:1}}
-    enabled
-  >
-   <View className =" realtive flex items-center  h-screen bg-slate-300 ">
+<KeyboardAvoidingView  className ='flex flex-1' behavior='height'>
+<TouchableWithoutFeedback onPress={Keyboard.dismiss} >
+  <View className='h-screen w-full flex flex-grow' style={{flex:1}}>
+ <View className ="  flex items-center  h-screen bg-slate-300 " style={{flex:1}} >
 
 
- 
 
- <View className="relative  h-[46%] w-[110%]  ">
+  
+ <View className="  h-[47%] w-[110%]  ">
  <Image source={require('../public/loginbck.png')}   className='h-[100%] w-[100%]    flex ' />
  </View>
 
+<View className=" h-[65%] w-full bg-blend-darken  pt-16 items-center justify-start">
 
-<View className="h-1/4 flex w-5/6 items-center justify-center  mb-8 ">
-<View className ='flex flex-row border-b-2  border-slate-800 items-center  '>
+<View className="h-1/4 flex w-5/6 items-center justify-center  mb-8">
+<View className =' relative flex flex-row border-b-2  border-slate-800 items-center  '>
 
   <Entypo name ="user" size={22} style={{position:"absolute", bottom: 5 }} />
 <TextInput type ="text" className="  w-full  py-0 pl-10 "  />
 </View>
 
-<View className ='flex flex-row border-b-2  border-slate-800 items-center    '>
+<View className =' relative flex flex-row border-b-2  border-slate-800 items-center    '>
 <MaterialCommunityIcons name ="key-chain" size={25} style={{position:"absolute", bottom: 5 }} />
 <TextInput type ="text" className=" w-full  py-0 pl-10 mt-5"  />
 </View>
@@ -78,7 +76,7 @@ function Login() {
   <Text className='text-slate-100 text-lg font-semibold font-sans'>LOGIN</Text>
 </LinearGradient>
 </Pressable>
-<View className="flex flex-row py-3">
+<View className="flex flex-row py-2">
 
 <Text className='text-slate-900 text-center font  text-md p-2 font-bold font-sans'>You don't have account ?</Text> 
 <Pressable className=" flex items-center justify-center">
@@ -86,16 +84,35 @@ function Login() {
 </Pressable>
 </View>
 
-<View className='absolute   w-full bottom-5  '>
+<View className='  w-full pt-8  '>
 <Text className='text-slate-900 text-center  text-md p-2 font-bold  font-sans'>All rights resereved by IT Wing Training College NHMP</Text> 
 </View>
 
+</View>
+</View>
    </View>
-   </KeyboardAvoidingView>
-   </SafeAreaView>
+   </TouchableWithoutFeedback>
+  </KeyboardAvoidingView>
+  
   );
-}
 
+
+// return (
+//   <KeyboardAvoidingView behavior="padding" className ='flex flex-1'>
+//     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+//       <View style={styles.inner}>
+//         <Text style={styles.header}>Header</Text>
+//         <TextInput placeholder="Username" style={styles.textInput} />
+//         <View style={styles.btnContainer}>
+//           <TextInput placeholder="Username" style={styles.textInput} />
+//           <Pressable title="Submit" onPress={() => null} />
+//         </View>
+//       </View>
+//     </TouchableWithoutFeedback>
+//   </KeyboardAvoidingView>
+// );
+
+}
 
 
 export default Login;
@@ -105,3 +122,28 @@ export default Login;
     <Image source={require('../public/nhmpclg.jpeg')}   className='w-full h-full rounded-b-full   flex opacity-40 bg-[#125975]' />
     </View> */}
  {/* <Image source={require('../public/logo.png')}   className=' absolute w-20 h-20 bg-blue-800 rounded-full top-[24%]' /> */}
+
+//  const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//   },
+//   inner: {
+//     padding: 24,
+//     flex: 1,
+//     justifyContent: 'space-around',
+//   },
+//   header: {
+//     fontSize: 36,
+//     marginBottom: 48,
+//   },
+//   textInput: {
+//     height: 40,
+//     borderColor: '#000000',
+//     borderBottomWidth: 1,
+//     marginBottom: 36,
+//   },
+//   btnContainer: {
+//     backgroundColor: 'white',
+//     marginTop: 12,
+//   },
+//   });
