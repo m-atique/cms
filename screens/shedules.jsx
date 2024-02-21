@@ -22,7 +22,7 @@ import {
   Header,
   LearnMoreLinks,
   ReloadInstructions,
-} from 'react-native/Libraries/NewHomeScreen';
+} from 'react-native/Libraries/NewShedulesScreen';
 import LinearGradient from 'react-native-linear-gradient';
 import AntDesignIcons from 'react-native-vector-icons/AntDesign'
 import Entypo  from 'react-native-vector-icons/Entypo'
@@ -33,18 +33,18 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 
 
-function Home() {
+function Shedules() {
 
 
   return (
     <View>
-        <Text className ="font-bold text-3xl">HOME </Text>
+        <Text className ="font-bold text-3xl">SHEDULES</Text>
     </View>
   );
 }
 
 
 
-export default Home;
+export default Shedules;
 
 

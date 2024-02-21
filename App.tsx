@@ -24,9 +24,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Login  from './screens/loginnew'
-import SignUp from './screens/signUp';
+
 import MyStack from './components/navigation/navigation';
+import MyDrawer from './components/navigation/drawernv'
 
 
 

@@ -28,14 +28,14 @@ import LinearGradient from 'react-native-linear-gradient';
 import AntDesignIcons from 'react-native-vector-icons/AntDesign'
 import Entypo  from 'react-native-vector-icons/Entypo'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-
+import { useNavigation } from '@react-navigation/native';
 
 
 
 
 
 function Login() {
-
+const navigation = useNavigation()
 
   return (
 <KeyboardAvoidingView  className ='flex flex-1' behavior='height'>
@@ -71,7 +71,7 @@ function Login() {
 </View>
 
 
-<Pressable className="w-4/6 flex items-center justify-center ">
+<Pressable className="w-4/6 flex items-center justify-center " onPress={()=>navigation.navigate("Home")}>
 <LinearGradient colors={['#324EB5', '#005163']}  start={{x: 0.0, y: 0.0}} end={{x: 0.9, y: 0.9}} locations={[0.1,0.9,]} className="w-full p-3 flex items-center justify-center  ">
   <Text className='text-slate-100 text-lg font-semibold font-sans'>LOGIN</Text>
 </LinearGradient>
@@ -79,7 +79,7 @@ function Login() {
 <View className="flex flex-row py-2">
 
 <Text className='text-slate-900 text-center font  text-md p-2 font-bold font-sans'>You don't have account ?</Text> 
-<Pressable className=" flex items-center justify-center">
+<Pressable className=" flex items-center justify-center" onPress={()=>navigation.navigate("SignUp")}>
   <Text className='text-blue-800 text-md font-bold font-sans'>SIGN UP</Text>
 </Pressable>
 </View>
@@ -96,54 +96,9 @@ function Login() {
   
   );
 
-
-// return (
-//   <KeyboardAvoidingView behavior="padding" className ='flex flex-1'>
-//     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-//       <View style={styles.inner}>
-//         <Text style={styles.header}>Header</Text>
-//         <TextInput placeholder="Username" style={styles.textInput} />
-//         <View style={styles.btnContainer}>
-//           <TextInput placeholder="Username" style={styles.textInput} />
-//           <Pressable title="Submit" onPress={() => null} />
-//         </View>
-//       </View>
-//     </TouchableWithoutFeedback>
-//   </KeyboardAvoidingView>
-// );
-
 }
 
 
 export default Login;
 
 
-    {/* <View className="relative  h-[30%] w-[110%] rounded-b-full border-r-[16px] border-r-yellow-400   ">
-    <Image source={require('../public/nhmpclg.jpeg')}   className='w-full h-full rounded-b-full   flex opacity-40 bg-[#125975]' />
-    </View> */}
- {/* <Image source={require('../public/logo.png')}   className=' absolute w-20 h-20 bg-blue-800 rounded-full top-[24%]' /> */}
-
-//  const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//   },
-//   inner: {
-//     padding: 24,
-//     flex: 1,
-//     justifyContent: 'space-around',
-//   },
-//   header: {
-//     fontSize: 36,
-//     marginBottom: 48,
-//   },
-//   textInput: {
-//     height: 40,
-//     borderColor: '#000000',
-//     borderBottomWidth: 1,
-//     marginBottom: 36,
-//   },
-//   btnContainer: {
-//     backgroundColor: 'white',
-//     marginTop: 12,
-//   },
-//   });
