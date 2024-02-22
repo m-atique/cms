@@ -8,6 +8,7 @@ import { Text,View } from 'react-native';
 import MyDrawer from './drawernv';
 import MyTabs from './tabnv';
 
+
 const Stack = createNativeStackNavigator();
 
 const MyStack = () => {

@@ -16,17 +16,23 @@ export default function MyTabs() {
       
         <Tab.Navigator 
         initialRouteName="Home"
-        screenOptions={{ headerStyle: { backgroundColor: '#CCD1D1' } }}
+        screenOptions={{
+          tabBarStyle: { position: 'absolute' },
+          tabBarBackground: () => (
+            <View className='bg-blue-100 border-none w-full h-full rounded-t-lg '>  
+            </View>
+          ),
+        }}
        
         
         >
-          
+        
           <Tab.Screen name="Notifications" component={Notifications}
         
             options={{
                 headerShown:false,
                 tabBarIcon:()=>(<View>
-                    <Ionicons name ="notifications-outline" size={25}  />
+                    <Ionicons name ="notifications-outline" size={25} color="blue" />
                 </View>)
               
               
@@ -34,8 +40,8 @@ export default function MyTabs() {
           <Tab.Screen name="Home" component={Home} 
              options={{
                 headerShown:false,
-                tabBarIcon:()=>(<View className = "bg-yellow-300 flex items-center justify-center rounded-full  border-yellow-300  w-12 h-12 -top-3 border-2">
-                    <AntDesign name ="home" size={30}  />
+                tabBarIcon:()=>(<View className = "bg-yellow-300 flex items-center justify-center rounded-full   w-12 h-12 -top-4 shadow-md shadow-black">
+                    <AntDesign name ="home" size={25}  color='blue'  />
                 </View>)
               }}
           />
@@ -43,7 +49,7 @@ export default function MyTabs() {
            options={{
             headerShown:false,
             tabBarIcon:()=>(<View>
-                <AntDesign name ="calendar" size={25}  />
+                <AntDesign name ="calendar" size={25} color="blue" />
             </View>)
           }}
           />
