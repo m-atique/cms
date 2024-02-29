@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/cantate-beveled.ttf",
+      "sha1": "1909675cabdbb30686ce0bc3c8091da5ae68c550"
+    },
+    {
+      "path": "assets/fonts/nastaleeq.ttf",
+      "sha1": "fe328332fcbfca1084de9c60169e41395a8044db"
+    },
+    {
+      "path": "assets/fonts/raleway-black.ttf",
+      "sha1": "6d79683d6f2ded5ff592cee98521010400a297e5"
+    }
+  ]
+}
